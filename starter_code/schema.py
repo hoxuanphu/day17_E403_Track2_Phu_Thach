@@ -6,8 +6,12 @@ from pydantic import BaseModel, Field
 
 class UnifiedDocument(BaseModel):
     """
-    Hệ thống cần 6 trường thông tin chuẩn (document_id, source_type, author, category, content, timestamp). 
-    TODO: Khai báo các trường với kiểu dữ liệu str ở dưới.
+    This schema defines the standard fields required for both Group A (PDF) and Group B (Video) data, ensuring a unified structure for the AI agent's Knowledge Base.
     """
-    # Khai báo các trường ở đây...
-    pass
+    document_id: str
+    source_type: str
+    author: str
+    category: str
+    content: str
+    timestamp: str
+    
